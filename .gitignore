@@ -47,6 +47,5 @@ android/keystores/debug.keystore
 __tests__/
 android/
 ios/
-node_modules/
 .firebaserc
 firebase.json

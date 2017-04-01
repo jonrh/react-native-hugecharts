@@ -1,6 +1,11 @@
 # React-Native Highcharts
 
-This is a react-native component for IOS and Android that uses [Highcharts](http://www.highcharts.com) where you send the configuration as a prop and the chart is rendered within a WebView 
+This is a react-native component for iOS and Android that uses [Highcharts](http://www.highcharts.com) where you send the configuration as a prop and the chart is rendered within a WebView
+
+## Fork Info
+Just playing around in the open with my own ideas for the react-native-highcharts
+library. There are a few things I would like to do differently but don't want
+to bother the library authors : )
 
 ## Getting Started
 ```bat

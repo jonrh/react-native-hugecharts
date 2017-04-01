@@ -26,6 +26,7 @@
   },
   "homepage": "https://github.com/TradingPal/react-native-highcharts#readme",
   "dependencies": {
+    "react": "15.4.2",
     "react-native": "0.42.3"
   }
 }
