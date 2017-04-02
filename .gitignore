@@ -11,3 +11,6 @@ node_modules/
 # Folder containing various IDE settings, most commonly by JetBrains
 # IDEs such as WebStorm and IntelliJ.
 .idea/
+
+# Temporary and generated files when developing and debugging
+.tmp/

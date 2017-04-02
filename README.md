@@ -2,11 +2,25 @@
 
 # React Native Hugecharts
 
-This is a [React Native](reactnative) web view component that displays a [Highcharts](highcharts) graph.
+This is a [React Native](https://facebook.github.io/react-native/) web view component that displays a [Highcharts](https://www.highcharts.com/) graph. The name *Hugecharts* is a bad synonym pun to avoid naming conflicts with the original repository (see fork info below).
 
+## Todo & Roadmap
+Short term todo list:
+
+1. Get the library, `index.js`, to work on iOS and Android.
+1. Add usage documentation and examples.
+1. Create and publish the library to npm
+
+Not sure if or when I get to those but at present they are desirable goals:
+
+1. Refactor library to use TypeScript & provide a TypeScript definition.
+1. Options to specify if Highcharts source should be baked into the app or loaded via HTTPS.
+1. If possible/feasible, use Prettier or Babel to export a JavaScript object instead of the `flattenObject()` and `flattenText()` functions.
+1. Add package to the [Nix package manager](https://nixos.org/nix/).
+1. Add support for [Highstocks](https://www.highcharts.com/products/highstock) and [Highmaps](https://www.highcharts.com/products/highmaps).
 
 ## Fork Info & Acknowledgements
-This repository is a fork of [react-native-highcharts](rn-highcharts). I've used it successfully in production for a while but have some ideas for changes I don't want to bother the original authors with. In addition to that I see this as a learning opportunity to publish my first library, to gain a deeper understanding from the library author perspective.
+This repository is a fork of [react-native-highcharts](rn-https://github.com/TradingPal/react-native-highcharts). I've used it successfully in production for a while but have some ideas for changes I don't want to bother the original authors with. In addition to that I see this as a learning opportunity to publish my first library, to gain a deeper understanding from the library author perspective.
 
 
 I'd like to thank the following for their contributions to the original library:
@@ -18,9 +32,6 @@ I'd like to thank the following for their contributions to the original library:
 * [nkov](https://github.com/nkov)
 
 
-[reactnative]: https://facebook.github.io/react-native/
-[highcharts]: https://www.highcharts.com/
-[rn-highcharts]: https://github.com/TradingPal/react-native-highcharts
 
 
  

@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from "react";
-import { StyleSheet, WebView, Dimensions } from "react-native";
+import { View, StyleSheet, WebView, Dimensions } from "react-native";
 import html from "./page.html";
 
 const DEVICE_HEIGHT = Dimensions.get("window").height;
@@ -46,18 +46,22 @@ export default class ReactNativeHighcharts extends Component {
     const { configuration, style, ...otherProps } = this.props;
 
     return (
-      <WebView
-        onLayout={this._reRenderWebView}
-        style={[styles.webView, style]}
-        source={html}
-        javaScriptEnabled={true}
-        domStorageEnabled={true}
-        scalesPageToFit={false}
-        scrollEnabled={false}
-        automaticallyAdjustContentInsets={false}
-        injectedJavaScript={this._createInjectedJavascript(configuration)}
-        {...otherProps}
-      />
+      <View style={style}>
+        {/** The extra <View> that wraps the WebView is a workaround, see:
+         https://github.com/jonrh/react-native-hugecharts/issues/1 */}
+        <WebView
+          onLayout={this._reRenderWebView}
+          style={[styles.webView, style]}
+          source={html}
+          javaScriptEnabled={true}
+          domStorageEnabled={true}
+          scalesPageToFit={false}
+          scrollEnabled={false}
+          automaticallyAdjustContentInsets={false}
+          injectedJavaScript={this._createInjectedJavascript(configuration)}
+          {...otherProps}
+        />
+      </View>
     );
   }
 }
