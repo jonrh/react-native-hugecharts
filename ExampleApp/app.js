@@ -1,13 +1,12 @@
 import React, { Component } from "react";
-//import ReactNativeHighcharts from "../index";
-const ReactNativeHighcharts = require("../index.js");
+import { AppRegistry, StyleSheet, Text, View } from "react-native";
 
-export default class ExampleApp extends Component {
+import ReactNativeHighcharts from "./index.js";
+
+export default class App extends Component {
   render() {
-    let Highcharts = "Highcharts";
-
-    // A Highcharts configuration object, specifies how the graph should look and behave
-    let conf = {
+    var Highcharts = "Highcharts";
+    var conf = {
       chart: {
         type: "spline",
         animation: Highcharts.svg, // don't animate in old IE
@@ -15,10 +14,10 @@ export default class ExampleApp extends Component {
         events: {
           load: function() {
             // set up the updating of the chart each second
-            let series = this.series[0];
+            var series = this.series[0];
             setInterval(
               function() {
-                let x = new Date().getTime(), // current time
+                var x = new Date().getTime(), // current time
                   y = Math.random();
                 series.addPoint([x, y], true, true);
               },
@@ -67,7 +66,7 @@ export default class ExampleApp extends Component {
           name: "Random data",
           data: (function() {
             // generate an array of random data
-            let data = [], time = new Date().getTime(), i;
+            var data = [], time = new Date().getTime(), i;
 
             for (i = -19; i <= 0; i += 1) {
               data.push({
@@ -82,7 +81,9 @@ export default class ExampleApp extends Component {
     };
 
     return (
-      <ReactNativeHighcharts style={{ height: 300 }} configuration={conf} />
+      <View>
+        <ReactNativeHighcharts style={{ height: 300 }} configuration={conf} />
+      </View>
     );
   }
 }
