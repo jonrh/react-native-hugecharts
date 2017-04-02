@@ -1,107 +1,26 @@
-# React-Native Highcharts
+# ❗️🔥 NONFUNCTIONAL, WIP, DON'T USE THIS YET 🔥❗️
 
-This is a react-native component for iOS and Android that uses [Highcharts](http://www.highcharts.com) where you send the configuration as a prop and the chart is rendered within a WebView
+# React Native Hugecharts
 
-## Fork Info
-Just playing around in the open with my own ideas for the react-native-highcharts
-library. There are a few things I would like to do differently but don't want
-to bother the library authors : )
+This is a [React Native](reactnative) web view component that displays a [Highcharts](highcharts) graph.
 
-## Getting Started
-```bat
-npm install react-native-highcharts --save
-```
-## Demo
-![](http://i.giphy.com/l3vRdWwXin1ooLCHS.gif)
 
-## Basic example
-**REMEMBER**  to declare the variable Highcharts='Highcharts'
+## Fork Info & Acknowledgements
+This repository is a fork of [react-native-highcharts](rn-highcharts). I've used it successfully in production for a while but have some ideas for changes I don't want to bother the original authors with. In addition to that I see this as a learning opportunity to publish my first library, to gain a deeper understanding from the library author perspective.
 
-```javascript
-import ChartView from 'react-native-highcharts';
-...
-render() {
-    var Highcharts='Highcharts';
-    var conf={
-            chart: {
-                type: 'spline',
-                animation: Highcharts.svg, // don't animate in old IE
-                marginRight: 10,
-                events: {
-                    load: function () {
 
-                        // set up the updating of the chart each second
-                        var series = this.series[0];
-                        setInterval(function () {
-                            var x = (new Date()).getTime(), // current time
-                                y = Math.random();
-                            series.addPoint([x, y], true, true);
-                        }, 1000);
-                    }
-                }
-            },
-            title: {
-                text: 'Live random data'
-            },
-            xAxis: {
-                type: 'datetime',
-                tickPixelInterval: 150
-            },
-            yAxis: {
-                title: {
-                    text: 'Value'
-                },
-                plotLines: [{
-                    value: 0,
-                    width: 1,
-                    color: '#808080'
-                }]
-            },
-            tooltip: {
-                formatter: function () {
-                    return '<b>' + this.series.name + '</b><br/>' +
-                        Highcharts.dateFormat('%Y-%m-%d %H:%M:%S', this.x) + '<br/>' +
-                        Highcharts.numberFormat(this.y, 2);
-                }
-            },
-            legend: {
-                enabled: false
-            },
-            exporting: {
-                enabled: false
-            },
-            series: [{
-                name: 'Random data',
-                data: (function () {
-                    // generate an array of random data
-                    var data = [],
-                        time = (new Date()).getTime(),
-                        i;
+I'd like to thank the following for their contributions to the original library:
 
-                    for (i = -19; i <= 0; i += 1) {
-                        data.push({
-                            x: time + i * 1000,
-                            y: Math.random()
-                        });
-                    }
-                    return data;
-                }())
-            }]
-        };
-    return (
-      <ChartView style={{height:300}} config={conf}></ChartView>
-    );
-}
-```
+* Bernardo Orozco Garza, [Infinity0106](https://github.com/Infinity0106)
+* Donald P. Morton, [onaldmorton](https://github.com/donaldmorton)
+* Matteo Mazzarolo, [mmazzarolo](https://github.com/mmazzarolo)
+* Sergei Č., [Noiwex](https://github.com/Noiwex)
+* [nkov](https://github.com/nkov)
 
-## Props
-| Prop          | Required      | Description  |
-| ------------- |:-------------:| ------------:|
-| config        | true          | Highcharts configuration [See the docs.>>](http://www.highcharts.com/docs/getting-started/your-first-chart)  |
-| stock     | false      |   Default false; use Highstock |
-| style | false      |   Style object to be passed onto the WebView |
 
-## Stuff used to make this:
+[reactnative]: https://facebook.github.io/react-native/
+[highcharts]: https://www.highcharts.com/
+[rn-highcharts]: https://github.com/TradingPal/react-native-highcharts
 
- * [Highcharts](http://www.highcharts.com/) for making the chart
+
  

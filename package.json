@@ -1,30 +1,46 @@
 {
-  "name": "react-native-highcharts",
-  "version": "0.2.0",
-  "description": "JavaScript implementation of a view container that can flip between its front and back, where the back has a console.log and the front is your aplication.",
-  "main": "react-native-highcharts.js",
-  "scripts": {
-    "start": "node node_modules/react-native/local-cli/cli.js start",
-    "test": "jest"
-  },
+  "name": "react-native-hugecharts",
+  "version": "0.0.1",
+  "description": "",
+
+  "author": "Jón Rúnar Helgason <npm@jonrh.is> (http://jonrh.is/)",
+  "contributors": [
+    "Bernardo Orozco Garza (https://github.com/Infinity0106)",
+    "Donald P. Morton <donald.mg92@gmail.com> (https://github.com/donaldmorton)",
+    "Matteo Mazzarolo <mazzarolomatteo@gmail.com> (http://mmazzarolo.com/)",
+    "nkov (https://github.com/nkov)",
+    "Sergei Č. <noiwex1911@gmail.com> (https://github.com/Noiwex)"
+  ],
+
+  "license": "MIT",
+  "homepage": "https://github.com/jonrh/react-native-hugecharts#readme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/TradingPal/react-native-highcharts"
+    "url": "https://github.com/jonrh/react-native-hugecharts"
   },
+  "bugs": {
+    "url": "https://github.com/jonrh/react-native-hugecharts/issues"
+  },
+
   "keywords": [
+    "react",
     "react-native",
     "react-component",
     "ios",
     "android",
     "WebView",
-    "HighCharts"
+    "Highcharts",
+    "Highstock",
+    "Highmaps"
   ],
-  "author": "Infinity0106",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/TradingPal/react-native-highcharts/issues"
+
+  "module": "index.js",
+
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "jest"
   },
-  "homepage": "https://github.com/TradingPal/react-native-highcharts#readme",
+
   "dependencies": {
     "react": "15.4.2",
     "react-native": "0.42.3"
