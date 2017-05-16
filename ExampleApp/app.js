@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import { AppRegistry, StyleSheet, Text, View } from "react-native";
+import { View } from "react-native";
 
-import ReactNativeHighcharts from "./index.js";
+import ReactNativeHugehcharts from "react-native-hugecharts";
 
 export default class App extends Component {
   render() {
@@ -27,7 +27,7 @@ export default class App extends Component {
         }
       },
       title: {
-        text: "Live random data"
+        text: "Live random data "
       },
       xAxis: {
         type: "datetime",
@@ -82,7 +82,7 @@ export default class App extends Component {
 
     return (
       <View>
-        <ReactNativeHighcharts style={{ height: 300 }} configuration={conf} />
+        <ReactNativeHugehcharts style={{ height: 300 }} configuration={conf} />
       </View>
     );
   }

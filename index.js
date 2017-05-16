@@ -5,7 +5,7 @@ import html from "./page.html";
 const DEVICE_HEIGHT = Dimensions.get("window").height;
 const DEVICE_WIDTH = Dimensions.get("window").width;
 
-export default class ReactNativeHighcharts extends Component {
+export default class ReactNativeHugehcharts extends Component {
   static propTypes = {
     configuration: PropTypes.object.isRequired,
     style: PropTypes.any

@@ -1,9 +1,8 @@
 {
   "name": "react-native-hugecharts",
   "version": "0.0.1",
-  "description": "",
-
-  "author": "Jón Rúnar Helgason <npm@jonrh.is> (http://jonrh.is/)",
+  "description": "Highcharts web view wrapper for React Native mobile apps",
+  "author": "Jón Rúnar Helgason <dev@jonrh.is> (http://jonrh.is/)",
   "contributors": [
     "Bernardo Orozco Garza (https://github.com/Infinity0106)",
     "Donald P. Morton <donald.mg92@gmail.com> (https://github.com/donaldmorton)",
@@ -11,9 +10,8 @@
     "nkov (https://github.com/nkov)",
     "Sergei Č. <noiwex1911@gmail.com> (https://github.com/Noiwex)"
   ],
-
   "license": "MIT",
-  "homepage": "https://github.com/jonrh/react-native-hugecharts#readme",
+  "homepage": "https://github.com/jonrh/react-native-hugecharts",
   "repository": {
     "type": "git",
     "url": "https://github.com/jonrh/react-native-hugecharts"
@@ -21,7 +19,6 @@
   "bugs": {
     "url": "https://github.com/jonrh/react-native-hugecharts/issues"
   },
-
   "keywords": [
     "react",
     "react-native",
@@ -33,16 +30,14 @@
     "Highstock",
     "Highmaps"
   ],
-
   "module": "index.js",
-
+  "main": "index",
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "test": "jest"
   },
-
-  "dependencies": {
+  "peerDependencies": {
     "react": "15.4.2",
-    "react-native": "0.42.3"
+    "react-native": "0.40.0"
   }
 }
