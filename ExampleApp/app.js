@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { View } from "react-native";
 
-import ReactNativeHugehcharts from "react-native-hugecharts";
+import ReactNativeHugecharts from "react-native-hugecharts";
 
 export default class App extends Component {
   render() {
@@ -82,7 +82,7 @@ export default class App extends Component {
 
     return (
       <View>
-        <ReactNativeHugehcharts style={{ height: 300 }} configuration={conf} />
+        <ReactNativeHugecharts style={{ height: 300 }} configuration={conf} />
       </View>
     );
   }
