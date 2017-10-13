@@ -1,11 +1,33 @@
-# ❗️🔥 NONFUNCTIONAL, WIP, DON'T USE THIS YET 🔥❗️
+# ❗️🔥 WIP - DON'T USE THIS YET 🔥❗️
 
 # React Native Hugecharts
 
-This is a [React Native](https://facebook.github.io/react-native/) web view component that displays a [Highcharts](https://www.highcharts.com/) graph. The name *Hugecharts* is a bad synonym pun to avoid naming conflicts with the original repository (see fork info below).
+This is a [React Native](https://facebook.github.io/react-native/) web view component that displays a [Highcharts](https://www.highcharts.com/) graph. The name *Hugecharts* is a bad synonym pun to avoid naming conflicts with the original repository (see fork info below). Using react-native-hugecharts is free for non-commercial use. For commercial projects you will need to [acquire a Highcharts license](https://shop.highsoft.com/highcharts) from Highsoft.
 
-Using react-native-hugecharts is free for non-commercial use. For commercial projects you will need to [acquire a Highcharts license](https://shop.highsoft.com/highcharts) from Highsoft.
+## Usage
+```
+$ npm install react-native-hugecharts --save
+```
 
+```javascript
+import ReactNativeHugecharts from "react-native-hugecharts";
+
+export default class App extends Component {
+  render() {
+    // A Highcharts configuration/options object. Defines what type of 
+    // chart should display, with what data and how it should look and 
+    // behave. For details please see:
+    // https://www.highcharts.com/docs/getting-started/how-to-set-options
+    var conf = {};
+
+    return (
+      <View>
+        <ReactNativeHugecharts style={{ height: 300 }} configuration={conf} />
+      </View>
+    );
+  }
+}
+```
 
 ## Todo & Roadmap
 Short term todo list:
